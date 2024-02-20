@@ -1,0 +1,69 @@
+body {
+  width: 100%;
+  font-family: 'Kode Mono';
+  background: url(/images/universe-background.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.div-body {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.div-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.div-header {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.menu-top {
+display: flex;
+flex-direction: row;
+margin: 20px;
+border-bottom: solid 2px white;
+border-top: solid 2px white;
+padding: 0px;
+li {
+  font-weight: bold;
+  font-size: 18px;
+}
+}
+
+.list-group-item {
+  border: 0px;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+    color: white;
+}
+
+.div-inputs-group {
+  width: 60%;
+  margin-top: 10px;
+}
+
+.div-li-input {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+label {
+  white-space: nowrap;
+  margin-right: 30px;
+  align-self: center;
+  font-weight: bold;
+}
+}
+
+.col-4 {
+  width: fit-content;
+}

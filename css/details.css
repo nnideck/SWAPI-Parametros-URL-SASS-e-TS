@@ -1,0 +1,81 @@
+body {
+  width: 100%;
+  font-family: "Kode Mono";
+  background: url(/images/universe-background.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.div-header {
+  font-size: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-header h3 {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  border-bottom: solid 2px white;
+  border-top: solid 2px white;
+}
+
+.div-body {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-btn {
+  border-radius: 2px;
+  border: 0;
+  font-weight: bold;
+  margin-top: 40px;
+}
+.back-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.div-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.div-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.div-scroll {
+  background-color: transparent;
+  padding-left: 20px;
+  padding-right: 10px;
+  height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d363e;
+  border: 0;
+}
+
+.col-4 {
+  width: fit-content;
+}
+
+/*# sourceMappingURL=details.css.map */
