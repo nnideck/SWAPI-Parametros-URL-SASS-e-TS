@@ -78,4 +78,8 @@ body {
   width: fit-content;
 }
 
+li {
+  list-style: none;
+}
+
 /*# sourceMappingURL=details.css.map */

@@ -1,3 +1,27 @@
 
 
 GET https://swapi.dev/api/ HTTP/1.1
+
+###
+
+GET https://swapi.dev/api/people/ HTTP/1.1
+
+###
+
+GET https://swapi.dev/api/planets/ HTTP/1.1
+
+###
+
+GET https://swapi.dev/api/films/ HTTP/1.1
+
+###
+
+GET https://swapi.dev/api/starships/ HTTP/1.1
+
+###
+
+GET https://swapi.dev/api/vehicles/ HTTP/1.1
+
+###
+
+GET https://swapi.dev/api/species/ HTTP/1.1
