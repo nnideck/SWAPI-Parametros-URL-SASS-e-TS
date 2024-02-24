@@ -12,13 +12,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  h3 {
-    margin-top: 15px;
-    text-align: center;
-    width: 100%;
-    border-bottom: solid 2px white;
-    border-top: solid 2px white;
-  }
+}
+.div-header h3 {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  border-bottom: solid 2px white;
+  border-top: solid 2px white;
 }
 
 .div-body {
@@ -33,10 +33,10 @@ body {
   border: 0;
   font-weight: bold;
   margin-top: 40px;
-  a {
-    text-decoration: none;
-    color: black;
-  }
+}
+.back-btn a {
+  text-decoration: none;
+  color: black;
 }
 
 .div-list {
@@ -47,10 +47,10 @@ body {
   margin-top: 10px;
   margin-left: 50px;
   margin-right: 50px;
-  a {
-    text-decoration: none;
-    color: white;
-  }
+}
+.div-list a {
+  text-decoration: none;
+  color: white;
 }
 
 .div-scroll {
@@ -79,5 +79,12 @@ body {
 }
 
 li {
-    list-style: none;
-  }
+  list-style: none;
+}
+
+.b_bgnd {
+  background-color: rgba(22, 29, 47, 0.4941176471);
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=list-details.css.map */
