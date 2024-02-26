@@ -46,76 +46,84 @@ function getHomeWorld(param) {
         const resp = yield fetch(`${param}`);
         const item = yield resp.json();
         const name = item.name;
-        const url = item.url;
-        person.homeworld = `<a href="${url}">${name}</a>`;
+        const url = item.url.slice(APIbase.length);
+        person.homeworld = ` <a href="planet-detail.html?${url}">${name}</a>`;
     });
 }
 function getFilm(param) {
     return __awaiter(this, void 0, void 0, function* () {
         if (param) {
             const nameList = [];
-            for (const url of param) {
-                const trim = url.replace('"', "");
+            for (const obj of param) {
+                const trim = obj.replace('"', "");
                 const resp = yield fetch(`${trim}`);
                 const item = yield resp.json();
-                const urlItem = item.url;
-                const name = `<a href="${urlItem}" style="font-style: italic";>${item.title}</a>`;
+                const url = item.url.slice(APIbase.length);
+                const name = ` <a href="film-detail.html?${url}" style="font-style: italic";>${item.title}</a>`;
                 nameList.push(name);
             }
             person.films = nameList;
         }
-        return ["None"];
+        else {
+            person.films = ["None"];
+        }
     });
 }
 function getSpecies(param) {
     return __awaiter(this, void 0, void 0, function* () {
         if (param.length != 0) {
             const nameList = [];
-            for (const url of param) {
-                const trim = url.replace('"', "");
+            for (const obj of param) {
+                const trim = obj.replace('"', "");
                 const resp = yield fetch(`${trim}`);
                 const item = yield resp.json();
-                const urlItem = item.url;
-                const name = `<a href="${urlItem}" style="font-style: italic">${item.name} </a>`;
+                const url = item.url.slice(APIbase.length);
+                const name = ` <a href="specie-detail.html?${url}" style="font-style: italic">${item.name} </a>`;
                 nameList.push(name);
             }
             person.species = nameList;
         }
-        return ["None"];
+        else {
+            person.species = ["None"];
+        }
     });
 }
 function getVehicles(param) {
     return __awaiter(this, void 0, void 0, function* () {
         if (param.length != 0) {
             const nameList = [];
-            for (const url of param) {
-                const trim = url.replace('"', "");
+            for (const obj of param) {
+                const trim = obj.replace('"', "");
                 const resp = yield fetch(`${trim}`);
                 const item = yield resp.json();
-                const urlItem = item.url;
-                const name = `<a href="${urlItem}" style="font-style: italic">${item.name}</a>`;
+                const url = item.url.slice(APIbase.length);
+                const name = ` <a href="vehicle-detail.html?${url}" style="font-style: italic">${item.name}</a>`;
                 nameList.push(name);
             }
             person.vehicles = nameList;
         }
-        return ["None"];
+        else {
+            person.vehicles = ["None"];
+        }
     });
 }
 function getStarships(param) {
     return __awaiter(this, void 0, void 0, function* () {
         if (param.length != 0) {
             const nameList = [];
-            for (const url of param) {
-                const trim = url.replace('"', "");
+            for (const obj of param) {
+                const trim = obj.replace('"', "");
                 const resp = yield fetch(`${trim}`);
                 const item = yield resp.json();
-                const urlItem = item.url;
-                const name = `<a href="${urlItem}" style="font-style: italic">${item.name}</a>`;
+                const url = item.url.slice(APIbase.length);
+                const name = ` <a href="starship-detail.html?${url}" style="font-style: italic">${item.name}</a>`;
                 nameList.push(name);
             }
             person.starships = nameList;
         }
-        return ["None"];
+        else {
+            person.starships = ["None"];
+        }
     });
 }
 function populateInterface(param) {

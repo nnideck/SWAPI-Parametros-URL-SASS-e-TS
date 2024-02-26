@@ -42,72 +42,76 @@ async function getHomeWorld(param: string) {
   const resp = await fetch(`${param}`);
   const item = await resp.json();
   const name = item.name;
-  const url = item.url;
-  person.homeworld = `<a href="${url}">${name}</a>`;
+  const url = item.url.slice(APIbase.length);
+  person.homeworld = ` <a href="planet-detail.html?${url}">${name}</a>`;
 }
 
 async function getFilm(param: string[]) {
   if (param) {
     const nameList = [];
-    for (const url of param) {
-      const trim = url.replace('"', "");
+    for (const obj of param) {
+      const trim = obj.replace('"', "");
       const resp = await fetch(`${trim}`);
       const item = await resp.json();
-      const urlItem = item.url;
-      const name = `<a href="${urlItem}" style="font-style: italic";>${item.title}</a>`;
+      const url = item.url.slice(APIbase.length);
+      const name = ` <a href="film-detail.html?${url}" style="font-style: italic";>${item.title}</a>`;
       nameList.push(name);
     }
     person.films = nameList;
+  } else {
+    person.films = ["None"];
   }
-  return ["None"];
 }
 
 async function getSpecies(param: string[]) {
   if (param.length != 0) {
     const nameList = [];
-    for (const url of param) {
-      const trim = url.replace('"', "");
+    for (const obj of param) {
+      const trim = obj.replace('"', "");
       const resp = await fetch(`${trim}`);
       const item = await resp.json();
-      const urlItem = item.url;
-      const name = `<a href="${urlItem}" style="font-style: italic">${item.name} </a>`;
+      const url = item.url.slice(APIbase.length);
+      const name = ` <a href="specie-detail.html?${url}" style="font-style: italic">${item.name} </a>`;
       nameList.push(name);
     }
     person.species = nameList;
+  } else {
+    person.species = ["None"];
   }
-  return ["None"];
 }
 
 async function getVehicles(param: string[]) {
   if (param.length != 0) {
     const nameList = [];
-    for (const url of param) {
-      const trim = url.replace('"', "");
+    for (const obj of param) {
+      const trim = obj.replace('"', "");
       const resp = await fetch(`${trim}`);
       const item = await resp.json();
-      const urlItem = item.url;
-      const name = `<a href="${urlItem}" style="font-style: italic">${item.name}</a>`;
+      const url = item.url.slice(APIbase.length);
+      const name = ` <a href="vehicle-detail.html?${url}" style="font-style: italic">${item.name}</a>`;
       nameList.push(name);
     }
     person.vehicles = nameList;
+  } else {
+    person.vehicles = ["None"];
   }
-  return ["None"];
 }
 
 async function getStarships(param: string[]) {
   if (param.length != 0) {
     const nameList = [];
-    for (const url of param) {
-      const trim = url.replace('"', "");
+    for (const obj of param) {
+      const trim = obj.replace('"', "");
       const resp = await fetch(`${trim}`);
       const item = await resp.json();
-      const urlItem = item.url;
-      const name = `<a href="${urlItem}" style="font-style: italic">${item.name}</a>`;
+      const url = item.url.slice(APIbase.length);
+      const name = ` <a href="starship-detail.html?${url}" style="font-style: italic">${item.name}</a>`;
       nameList.push(name);
     }
     person.starships = nameList;
+  } else {
+    person.starships = ["None"];
   }
-  return ["None"];
 }
 
 async function populateInterface(param: IPeople) {
